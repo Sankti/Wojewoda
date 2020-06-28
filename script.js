@@ -7,11 +7,11 @@ buttonSection = document.getElementById("button-section");
 makePlayButton = () => {
     let playButton = document.createElement("div");
         playButton.classList.add("button-round");
-        playButton.innerHTML = "Przejdź dalej";
+        playButton.innerHTML = "Graj w Wojewodę";
         document.getElementById("button-section").appendChild(playButton);
     
     pushButton = () => {
-        console.log("Wduszono przycisk.");
+        location.replace("./gra.html");
     }
     playButton.addEventListener("click", pushButton);
 }
@@ -19,9 +19,9 @@ makePlayButton = () => {
 makePlayButton();
 
 // Right Sidebar
-contentH = document.getElementById("content-h");
-contentP1 = document.getElementById("content-p1");
-contentP2 = document.getElementById("content-p2");
+let contentH = document.getElementById("content-h");
+let contentP1 = document.getElementById("content-p1");
+let contentP2 = document.getElementById("content-p2");
 
 let display = "default";
 
@@ -122,6 +122,9 @@ selectStrzelecki = () => {
 selectNyski = () => {
     countySelect("nyski");
 }
+selectPrudnicki = () => {
+    countySelect("prudnicki");
+}
 selectKrapkowicki = () => {
     countySelect("krapkowicki");
 }
@@ -137,9 +140,6 @@ selectOpole = () => {
 
 function stopLink(event) {
     event.preventDefault();
-}
-selectPrudnicki = () => {
-    countySelect("prudnicki");
 }
 
 const opolski = document.querySelector("#opolski");
