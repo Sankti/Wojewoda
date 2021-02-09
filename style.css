@@ -14,8 +14,7 @@ body {
 }
 
 svg {
-    width: auto;
-    height: 75vh;
+    size: 50%;
 }
 
 .mapdiv {
